@@ -7,15 +7,30 @@ use std::panic::catch_unwind;
 #[test]
 fn test_rgb_display() {
     assert_eq!(Color::new_rgb(0, 0, 0).to_string(), String::from("#000000"));
-    assert_eq!(Color::new_rgb(1, 20, 123).to_string(), String::from("#01147b"));
-    assert_eq!(Color::new_rgb(255, 255, 255).to_string(), String::from("#ffffff"));
+    assert_eq!(
+        Color::new_rgb(1, 20, 123).to_string(),
+        String::from("#01147b")
+    );
+    assert_eq!(
+        Color::new_rgb(255, 255, 255).to_string(),
+        String::from("#ffffff")
+    );
 }
 
 #[test]
 fn test_hsv_display() {
-    assert_eq!(Color::new_hsv(0, 0, 0).to_string(), String::from("hsv(0,0%,0%)"));
-    assert_eq!(Color::new_hsv(90, 3, 99).to_string(), String::from("hsv(90,3%,99%)"));
-    assert_eq!(Color::new_hsv(360, 100, 100).to_string(), String::from("hsv(360,100%,100%)"));
+    assert_eq!(
+        Color::new_hsv(0, 0, 0).to_string(),
+        String::from("hsv(0,0%,0%)")
+    );
+    assert_eq!(
+        Color::new_hsv(90, 3, 99).to_string(),
+        String::from("hsv(90,3%,99%)")
+    );
+    assert_eq!(
+        Color::new_hsv(360, 100, 100).to_string(),
+        String::from("hsv(360,100%,100%)")
+    );
 }
 
 #[test]
